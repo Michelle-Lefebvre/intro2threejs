@@ -8,14 +8,26 @@
       body {
         margin: 0;
       }
+      #info {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        display: block;
+      }
     </style>
   </head>
   <body>
+      
     <script src="js/three.js"></script>
     <!-- <script src="js/box.js"></script> -->
     <!-- <script src="js/lines.js"></script> -->
-    <script src="js/gauge.js"></script>
-   
+    <!-- <script src="js/gauge.js"></script> -->
+    <!-- <script src="js/text.js"></script> use A-Frame for text -->
+    <!-- <script src="js/loading3dModel.js"></script> not loading model -->
+
+
     <script type="module">
       // Find the latest version by visiting https://unpkg.com/three. The URL will
       // redirect to the newest stable release.
@@ -28,8 +40,7 @@
       // redirect to the newest stable release.
       import { OrbitControls } from "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js";
       const controls = new OrbitControls();
-    </script>
-    <script>
+
       // WebGL compatibility check
       if (WEBGL.isWebGLAvailable()) {
         // Initiate function or other initializations here
@@ -39,5 +50,6 @@
         document.getElementById("container").appendChild(warning);
       }
     </script>
+    
   </body>
 </html>
