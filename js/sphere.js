@@ -16,14 +16,15 @@ const canvas = document.querySelector('#c');
   scene.background = new THREE.Color(0xAAAAAA);
       // create sphere
       const radius = 1.5;
-      const widthSegments = 15;
-      const heightSegments = 10;
+      const widthSegments = 30;
+      const heightSegments = 12;
       const geometry = new THREE.SphereBufferGeometry(radius, widthSegments, heightSegments);
       const material = new THREE.PointsMaterial({
         color: 'red',
-        // sizeAttenuation: false,
-        // size: 3,       // in pixels
-          size: 0.1,     // in world units
+        // size: 0.1,     // in world units
+        sizeAttenuation: false,
+        size: 2,       // in pixels
+          
       });
       const points = new THREE.Points(geometry, material);
       scene.add(points);
