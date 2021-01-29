@@ -13,6 +13,7 @@ const scene = new THREE.Scene();
       // create box
       const geometry = new THREE.BoxGeometry();
       const material = new THREE.MeshBasicMaterial({ color: 0x00fffa });
+    //   const material = new THREE.MeshBasicMaterial({ color: 0x00fffa, side: THREE.DoubleSide }); // to render back side
       const cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
 
