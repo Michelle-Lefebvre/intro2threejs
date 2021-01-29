@@ -3,8 +3,14 @@
 function main() {
     const canvas = document.querySelector('#c');
     const renderer = new THREE.WebGLRenderer({
-        canvas
+        canvas,
+        alpha: true,
     });
+
+    // renderer.setClearColor( 0xffffff ); // background color
+    // renderer = new THREE.WebGLRenderer( { canvas, alpha: true } ); // init like this
+renderer.setClearColor( 0xA9A9A9, 0 ); // second param is opacity, 0 => transparent
+
 
     const fov = 75;
     const aspect = 2; // the canvas default
